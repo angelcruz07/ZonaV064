@@ -1,0 +1,40 @@
+---
+import Section from './Section.astro'
+import Card from './Card.astro'
+
+const IMAGES = [ 
+    {
+        id: 1, 
+        img1: "/img/1.webp", 
+        img2: "/img/2.webp", 
+        img3: "/img/3.webp", 
+        img4: "/img/4.webp", 
+        img5: "/img/5.webp", 
+    },
+    {
+        id: 2, 
+        img1: "/img/6.webp",  
+        img2: "/img/7.webp", 
+        img3: "/img/8.webp", 
+        img4: "/img/9.webp", 
+        img5: "/img/10.webp", 
+    },
+    {
+        id: 3, 
+        img1: "/img/11.webp", 
+        img2: "/img/12.webp", 
+        img3: "/img/13.webp", 
+        img4: "/img/14.webp", 
+        img5: "/img/15.webp", 
+    }
+]
+
+---
+<h2 class="text-3xl font-bold text-center">Aula en accion</h2>
+<hr>
+
+<Section>
+        {IMAGES.map((slide) => ( 
+            <Card key={slide.id} img1={slide.img1} img2={slide.img2} img3={slide.img3} img4={slide.img4} img5={slide.img5}/>
+    ))}       
+</Section>
